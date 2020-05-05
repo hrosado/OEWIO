@@ -82,3 +82,4 @@ C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.cspro
 C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.csproj.CopyComplete
 C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.dll
 C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.pdb
+C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.csprojAssemblyReference.cache

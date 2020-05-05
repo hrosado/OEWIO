@@ -26,5 +26,11 @@ namespace OEWIO.Controllers
 
             return View();
         }
+        public ActionResult Data()
+        {
+            ViewBag.Message = "Your Data page.";
+
+            return View();
+        }
     }
 }
