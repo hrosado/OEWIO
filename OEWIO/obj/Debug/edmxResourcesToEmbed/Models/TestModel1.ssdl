@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OEWIOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OEWIOArticles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Article" Type="nvarchar(max)" />
+    <Property Name="ArticleDate" Type="date" />
+    <Property Name="Created" Type="date" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="ProductID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SourceID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="OEWIOAuthors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuthorID" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OEWIOCommentary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductID" Type="uniqueidentifier" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OEWIOProductRegions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductID" Type="uniqueidentifier" />
+    <Property Name="RegionID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="OEWIOProducts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProductDate" Type="date" />
+    <Property Name="AuthorID" Type="uniqueidentifier" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OEWIORegions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RegionName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OEWIOSources">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Source" Type="nvarchar(max)" />
+    <Property Name="SourceURL" Type="nvarchar(max)" />
+    <Property Name="SourceDate" Type="date" />
+    <Property Name="Image" Type="image" />
+    <Property Name="ProductID" Type="uniqueidentifier" />
+    <Property Name="ArticleID" Type="uniqueidentifier" />
+  </EntityType>
+  <Association Name="FK_OEWIOArticles_OEWIOProducts">
+    <End Role="OEWIOProducts" Type="Self.OEWIOProducts" Multiplicity="1" />
+    <End Role="OEWIOArticles" Type="Self.OEWIOArticles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIOProducts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOArticles">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OEWIOCommentary_OEWIOProducts">
+    <End Role="OEWIOProducts" Type="Self.OEWIOProducts" Multiplicity="0..1" />
+    <End Role="OEWIOCommentary" Type="Self.OEWIOCommentary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIOProducts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOCommentary">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OEWIOProductRegions_OEWIOProducts">
+    <End Role="OEWIOProducts" Type="Self.OEWIOProducts" Multiplicity="0..1" />
+    <End Role="OEWIOProductRegions" Type="Self.OEWIOProductRegions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIOProducts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOProductRegions">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OEWIOProductRegions_OEWIORegions">
+    <End Role="OEWIORegions" Type="Self.OEWIORegions" Multiplicity="0..1" />
+    <End Role="OEWIOProductRegions" Type="Self.OEWIOProductRegions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIORegions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOProductRegions">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OEWIOProducts_OEWIOAuthors">
+    <End Role="OEWIOAuthors" Type="Self.OEWIOAuthors" Multiplicity="0..1" />
+    <End Role="OEWIOProducts" Type="Self.OEWIOProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIOAuthors">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOProducts">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OEWIOSources_OEWIOArticles">
+    <End Role="OEWIOArticles" Type="Self.OEWIOArticles" Multiplicity="0..1" />
+    <End Role="OEWIOSources" Type="Self.OEWIOSources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIOArticles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOSources">
+        <PropertyRef Name="ArticleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OEWIOSources_OEWIOProducts">
+    <End Role="OEWIOProducts" Type="Self.OEWIOProducts" Multiplicity="0..1" />
+    <End Role="OEWIOSources" Type="Self.OEWIOSources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OEWIOProducts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OEWIOSources">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OEWIOModelStoreContainer">
+    <EntitySet Name="OEWIOArticles" EntityType="Self.OEWIOArticles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OEWIOAuthors" EntityType="Self.OEWIOAuthors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OEWIOCommentary" EntityType="Self.OEWIOCommentary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OEWIOProductRegions" EntityType="Self.OEWIOProductRegions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OEWIOProducts" EntityType="Self.OEWIOProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OEWIORegions" EntityType="Self.OEWIORegions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OEWIOSources" EntityType="Self.OEWIOSources" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_OEWIOArticles_OEWIOProducts" Association="Self.FK_OEWIOArticles_OEWIOProducts">
+      <End Role="OEWIOProducts" EntitySet="OEWIOProducts" />
+      <End Role="OEWIOArticles" EntitySet="OEWIOArticles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OEWIOCommentary_OEWIOProducts" Association="Self.FK_OEWIOCommentary_OEWIOProducts">
+      <End Role="OEWIOProducts" EntitySet="OEWIOProducts" />
+      <End Role="OEWIOCommentary" EntitySet="OEWIOCommentary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OEWIOProductRegions_OEWIOProducts" Association="Self.FK_OEWIOProductRegions_OEWIOProducts">
+      <End Role="OEWIOProducts" EntitySet="OEWIOProducts" />
+      <End Role="OEWIOProductRegions" EntitySet="OEWIOProductRegions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OEWIOProductRegions_OEWIORegions" Association="Self.FK_OEWIOProductRegions_OEWIORegions">
+      <End Role="OEWIORegions" EntitySet="OEWIORegions" />
+      <End Role="OEWIOProductRegions" EntitySet="OEWIOProductRegions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OEWIOProducts_OEWIOAuthors" Association="Self.FK_OEWIOProducts_OEWIOAuthors">
+      <End Role="OEWIOAuthors" EntitySet="OEWIOAuthors" />
+      <End Role="OEWIOProducts" EntitySet="OEWIOProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OEWIOSources_OEWIOArticles" Association="Self.FK_OEWIOSources_OEWIOArticles">
+      <End Role="OEWIOArticles" EntitySet="OEWIOArticles" />
+      <End Role="OEWIOSources" EntitySet="OEWIOSources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OEWIOSources_OEWIOProducts" Association="Self.FK_OEWIOSources_OEWIOProducts">
+      <End Role="OEWIOProducts" EntitySet="OEWIOProducts" />
+      <End Role="OEWIOSources" EntitySet="OEWIOSources" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
