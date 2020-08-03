@@ -20,11 +20,13 @@ namespace OEWIO
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/offcanvas.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/jumbotron.css",
+                      "~/Content/offcanvas.css",
                       "~/Content/site.css"));
         }
     }
