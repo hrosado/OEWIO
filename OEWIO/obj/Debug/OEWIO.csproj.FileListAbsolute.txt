@@ -163,7 +163,6 @@ C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Net.Http.Formatting.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Http.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Http.WebHost.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csprojAssemblyReference.cache
 C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csproj.CoreCompileInputs.cache
 C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csproj.CopyComplete
 C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.dll
