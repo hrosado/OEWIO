@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OEWIOModelStoreContainer" CdmEntityContainer="OEWIOEntities">
+    <EntitySetMapping Name="OEWIOArticles">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIOArticle">
+        <MappingFragment StoreEntitySet="OEWIOArticles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Article" ColumnName="Article" />
+          <ScalarProperty Name="ArticleDate" ColumnName="ArticleDate" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OEWIOAuthors">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIOAuthor">
+        <MappingFragment StoreEntitySet="OEWIOAuthors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OEWIOCommentaries">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIOCommentary">
+        <MappingFragment StoreEntitySet="OEWIOCommentary">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OEWIOProductRegions">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIOProductRegion">
+        <MappingFragment StoreEntitySet="OEWIOProductRegions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OEWIOProducts">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIOProduct">
+        <MappingFragment StoreEntitySet="OEWIOProducts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ProductDate" ColumnName="ProductDate" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OEWIORegions">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIORegion">
+        <MappingFragment StoreEntitySet="OEWIORegions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OEWIOSources">
+      <EntityTypeMapping TypeName="OEWIOModel.OEWIOSource">
+        <MappingFragment StoreEntitySet="OEWIOSources">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="SourceURL" ColumnName="SourceURL" />
+          <ScalarProperty Name="SourceDate" ColumnName="SourceDate" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
