@@ -12,23 +12,16 @@ namespace OEWIO.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class OEWIOAuthor
+    public class OEWIOAuthor
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OEWIOAuthor()
-        {
-            this.OEWIOProducts = new HashSet<OEWIOProduct>();
-        }
     
         public System.Guid ID { get; set; }
-        public Nullable<int> AuthorID { get; set; }
+        public int AuthorID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Nullable<System.DateTime> Created { get; set; }
-        public Nullable<System.DateTime> Modified { get; set; }
+        public System.DateTime Created { get; set; }
+        public System.DateTime Modified { get; set; }
         public bool Active { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEWIOProduct> OEWIOProducts { get; set; }
+        public virtual ICollection<OEWIOProduct> OEWIOProduct { get; set; }
     }
 }

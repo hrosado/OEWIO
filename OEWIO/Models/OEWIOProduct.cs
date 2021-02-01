@@ -12,32 +12,31 @@ namespace OEWIO.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class OEWIOProduct
+    public class OEWIOProduct
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OEWIOProduct()
-        {
-            this.OEWIOArticles = new HashSet<OEWIOArticle>();
-            this.OEWIOCommentaries = new HashSet<OEWIOCommentary>();
-            this.OEWIOProductRegions = new HashSet<OEWIOProductRegion>();
-            this.OEWIOSources = new HashSet<OEWIOSource>();
-        }
+        //public OEWIOProduct()
+        //{
+        //    //this.OEWIOArticles = new HashSet<OEWIOArticle>();
+        //    //this.OEWIOCommentaries = new HashSet<OEWIOCommentary>();
+        //    //this.OEWIOProductRegions = new HashSet<OEWIOProductRegion>();
+        //    //this.OEWIOSources = new HashSet<OEWIOSource>();
+        //}
     
         public System.Guid ID { get; set; }
+        public int ProductID { get; set; }
         public string Title { get; set; }
-        public Nullable<System.DateTime> ProductDate { get; set; }
-        public Nullable<System.Guid> AuthorID { get; set; }
-        public Nullable<System.DateTime> Created { get; set; }
-        public Nullable<System.DateTime> Modified { get; set; }
+        public System.DateTime ProductDate { get; set; }
+        public System.Guid AuthorID { get; set; }
+        public System.DateTime Created { get; set; }
+        public System.DateTime Modified { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEWIOArticle> OEWIOArticles { get; set; }
+        public virtual OEWIOArticle OEWIOArticle { get; set; }
         public virtual OEWIOAuthor OEWIOAuthor { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEWIOCommentary> OEWIOCommentaries { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEWIOProductRegion> OEWIOProductRegions { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEWIOSource> OEWIOSources { get; set; }
+    //    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    //    public virtual ICollection<OEWIOCommentary> OEWIOCommentaries { get; set; }
+    //    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    //    public virtual ICollection<OEWIOProductRegion> OEWIOProductRegions { get; set; }
+    //    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    //    public virtual ICollection<OEWIOSource> OEWIOSources { get; set; }
     }
 }

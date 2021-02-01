@@ -11,25 +11,26 @@ namespace OEWIO.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class OEWIOArticle
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    public  class OEWIOArticle
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OEWIOArticle()
-        {
-            this.OEWIOSources = new HashSet<OEWIOSource>();
-        }
+        //public OEWIOArticle()
+        //{
+        //    this.OEWIOSources = new HashSet<OEWIOSource>();
+        //}
     
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public System.Guid ID { get; set; }
+        public int ArticleID { get; set; }
         public string Article { get; set; }
-        public Nullable<System.DateTime> ArticleDate { get; set; }
-        public Nullable<System.DateTime> Created { get; set; }
-        public Nullable<System.DateTime> Modified { get; set; }
-        public System.Guid ProductID { get; set; }
-        public Nullable<System.Guid> SourceID { get; set; }
+        public System.DateTime ArticleDate { get; set; }
+        public System.DateTime Created { get; set; }
+        public System.DateTime Modified { get; set; }
+        //public System.Guid ProductID { get; set; }
+        //public System.Guid SourceID { get; set; }
     
-        public virtual OEWIOProduct OEWIOProduct { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEWIOSource> OEWIOSources { get; set; }
+        public virtual ICollection<OEWIOProduct> OEWIOProduct { get; set; }
+        //public virtual ICollection<OEWIOSource> OEWIOSources { get; set; }
     }
 }

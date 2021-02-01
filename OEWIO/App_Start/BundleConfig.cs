@@ -21,12 +21,14 @@ namespace OEWIO
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/offcanvas.js"));
+                      "~/Scripts/offcanvas.js",
+                      "~/Scripts/dashboard.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/jumbotron.css",
                       "~/Content/offcanvas.css",
+                      "~/Content/dashboard.css",
                       "~/Content/site.css"));
         }
     }

@@ -83,6 +83,7 @@ C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.cspro
 C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.dll
 C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.pdb
 C:\Users\Developer\Documents\2020_HPMini_Repos\OEWIO\OEWIO\obj\Debug\OEWIO.csprojAssemblyReference.cache
+C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csproj.CoreCompileInputs.cache
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\OEWIO.dll.config
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\OEWIO.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\OEWIO.pdb
@@ -136,6 +137,8 @@ C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\roslyn\vbc.rsp
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\roslyn\VBCSCompiler.exe
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\Antlr3.Runtime.dll
+C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\EntityFramework.dll
+C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\EntityFramework.SqlServer.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\Newtonsoft.Json.dll
@@ -150,6 +153,8 @@ C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.WebPages.Deployment.dl
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.WebPages.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.WebPages.Razor.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\WebGrease.dll
+C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\EntityFramework.xml
+C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\EntityFramework.SqlServer.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Helpers.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Mvc.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Optimization.xml
@@ -163,7 +168,7 @@ C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Net.Http.Formatting.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Http.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\System.Web.Http.WebHost.xml
 C:\Users\Telework\source\repos\OEWIO\OEWIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csproj.CoreCompileInputs.cache
 C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csproj.CopyComplete
 C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.dll
 C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.pdb
+C:\Users\Telework\source\repos\OEWIO\OEWIO\obj\Debug\OEWIO.csprojAssemblyReference.cache
